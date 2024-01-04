@@ -39,7 +39,7 @@ public class AddressBook {
         System.out.println("1. Add new contact");
         System.out.println("2. Find a contact by name");
         System.out.println("3. Display contacts");
-        System.out.println("4. Exit");
+        System.out.println("4. Out");
     }
 
     private int getChoice() {
@@ -58,24 +58,24 @@ public class AddressBook {
         String phone = scanner.nextLine();
         Contact contact = new Contact(name, phone);
         contacts.put(name, contact);
-        System.out.println("Contact added successfully!");
+        System.out.println("Successful");
     }
 
     private void findContactByName() {
-        System.out.print("Enter name to search: ");
+        System.out.print("Enter name: ");
         String name = scanner.nextLine();
         Contact contact = contacts.get(name);
         if (contact != null) {
             System.out.println("Name: " + contact.getName());
             System.out.println("Phone Number: " + contact.getPhone());
         } else {
-            System.out.println("Contact not found.");
+            System.out.println("Not found");
         }
     }
 
     private void displayContacts() {
         if (contacts.isEmpty()) {
-            System.out.println("No contacts found.");
+            System.out.println("No contacts found");
         } else {
             System.out.println("Address Book:");
             for (Contact contact : contacts.values()) {
